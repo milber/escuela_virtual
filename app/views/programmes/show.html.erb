@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @programme.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @programme.description %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @programme.score %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @programme.status %>
+</p>
+
+<%= link_to 'Edit', edit_programme_path(@programme) %> |
+<%= link_to 'Back', programmes_path %>
