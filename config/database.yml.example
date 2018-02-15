@@ -1,0 +1,46 @@
+# MySQL.  Versions 5.0+ are recommended.
+#
+# Install the MYSQL driver
+#   gem install mysql2
+#
+# Ensure the MySQL gem is defined in your Gemfile
+#   gem 'mysql2'
+#
+# And be sure to use new-style password hashing:
+#   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
+#
+
+# default: &default
+#   adapter: mysql2
+#   encoding: utf8
+#   pool: 5
+#   username: root
+#   password: admin
+#   # socket: /var/run/mysqld/mysqld.sock
+
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  pool: 5
+  username: xxxxxxxx
+  password: xxxxxxxx
+
+development:
+  <<: *default
+ 
+  database: escuela_virtual_dev
+  
+  
+production:
+  <<: *default
+  database: escuela_virtual
+  
+test:
+  <<: *default
+  database: escuela_virtual_test
+
+#remote conexion
+
+# development:  
+#   url: postgres://harbor_db:runWanHackPombolmyoyHekEuLoghudZeasDotEkBufricWeektaytNuBluWruk0@sl-us-dal-9-portal.2.dblayer.com:17313/harbor_staging
+  
