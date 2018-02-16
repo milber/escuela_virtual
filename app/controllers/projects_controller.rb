@@ -46,7 +46,7 @@ class ProjectsController < ApplicationController
   def destroy
     @project.destroy
     respond_to do |format|
-      format.html { redirect_to projects_url, notice: 'Project was successfully destroyed.' }
+      format.html { redirect_to programme_projects_path(@project.programme_id), notice: 'El projecto fue eliminado con éxito.' }
       format.json { head :no_content }
     end
   end
