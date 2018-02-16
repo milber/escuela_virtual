@@ -1,4 +1,7 @@
-<p id="notice"><%= notice %></p>
+<p>
+  <strong>Programme:</strong>
+  <%= @project.programme.name %>
+</p>
 
 <p>
   <strong>Name:</strong>
@@ -20,10 +23,5 @@
   <%= @project.status %>
 </p>
 
-<p>
-  <strong>Programme:</strong>
-  <%= @project.programme %>
-</p>
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+<%= link_to 'Edit', edit_programme_project_path(@project.programme.id, @project.id) %> |
+<%= link_to 'Volver', programme_projects_path(@project.programme_id) %>

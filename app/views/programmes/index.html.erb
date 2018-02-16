@@ -20,9 +20,9 @@
         <td><%= programme.score %></td>
         <td><%= programme.status %></td>
         <td><%= link_to programme.projects.size, programme_projects_path(programme.id) %></td>
-        <td><%= link_to 'Show', programme %></td>
-        <td><%= link_to 'Edit', edit_programme_path(programme) %></td>
-        <td><%= link_to 'Destroy', programme, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', programme %></td>
+        <td><%= link_to 'Editar', edit_programme_path(programme) %></td>
+        <td><%= link_to 'Eliminar', programme, method: :delete, data: { confirm: '¿Está seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Programme', new_programme_path %>
+<%= link_to 'Crear nuevo Programa', new_programme_path %>

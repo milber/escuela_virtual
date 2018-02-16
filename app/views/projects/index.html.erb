@@ -24,7 +24,8 @@
         <td><%= project.score %></td>
         <td><%= project.status %></td>
         <td><%= project.programme.name %></td>
-        
+        <td><%= link_to 'Ver', programme_project_path(project.programme.id, project.id) %></td>
+        <td><%= link_to 'Editar', edit_programme_project_path(project.programme_id, project.id) %></td>
       </tr>
     <% end %>
   </tbody>
@@ -33,3 +34,5 @@
 <br>
 
 <%= link_to 'Crear projecto', new_programme_project_path(@programme.id) %>
+<br>
+<%= link_to 'Volver', programmes_path(@programme.id) %>

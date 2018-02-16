@@ -1,6 +1,6 @@
-<h1>Editing Project</h1>
+<h1>Edición</h1>
 
-<%= render 'form', project: @project %>
+<%= render 'form', project: @project, url: programme_project_path(), verb: 'PUT'  %>
 
-<%= link_to 'Show', @project %> |
-<%= link_to 'Back', projects_path %>
+<%= link_to 'Editar', programme_project_path(@project.programme.id, @project.id) %> |
+<%= link_to 'Volver', programme_projects_path(@project.programme_id) %>
