@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%=  %></h1>
+<h1>Proyectos del programa: 
+  <br>
+  <%= "#{@programme.name}" %>
+</h1>
+<br>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Score</th>
+      <th>Status</th>
+      <th>Programme</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+        <td><%= project.name %></td>
+        <td><%= project.description %></td>
+        <td><%= project.score %></td>
+        <td><%= project.status %></td>
+        <td><%= project.programme.name %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Crear projecto', new_programme_project_path(@programme.id) %>
