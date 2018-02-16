@@ -1,24 +1,22 @@
-<p id="notice"><%= notice %></p>
-
 <p>
-  <strong>Name:</strong>
+  <strong>Nombre:</strong>
   <%= @programme.name %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>Descripcion:</strong>
   <%= @programme.description %>
 </p>
 
 <p>
-  <strong>Score:</strong>
+  <strong>KM:</strong>
   <%= @programme.score %>
 </p>
 
 <p>
-  <strong>Status:</strong>
+  <strong>Estado:</strong>
   <%= @programme.status %>
 </p>
 
-<%= link_to 'Edit', edit_programme_path(@programme) %> |
+<%= link_to 'Editar', edit_programme_path(@programme) %> |
 <%= link_to 'Volver', programmes_path %>

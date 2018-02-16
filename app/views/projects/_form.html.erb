@@ -11,22 +11,22 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label :name, 'Nombre' %>
     <%= form.text_field :name, id: :project_name %>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
+    <%= form.label :description, 'Descripción' %>
     <%= form.text_area :description, id: :project_description %>
   </div>
 
   <div class="field">
-    <%= form.label :score %>
+    <%= form.label :score, 'KM' %>
     <%= form.number_field :score, id: :project_score %>
   </div>
 
   <div class="field">
-    <%= form.label :status %>
+    <%= form.label :status, 'Estado' %>
     <%= form.number_field :status, id: :project_status %>
   </div>
   <%= form.hidden_field :programme_id, value: @programme.id %>
