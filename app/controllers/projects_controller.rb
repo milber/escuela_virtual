@@ -27,10 +27,9 @@ class ProjectsController < ApplicationController
   # POST /projects.json
   def create
     @project = Project.new(project_params)
-
     respond_to do |format|
       if @project.save
-        format.html { redirect_to @project, notice: 'Project was successfully created.' }
+        format.html { redirect_to programme_projects_path(@project.programme_id), notice: 'El projecto fue creado con éxito.' }
         format.json { render :show, status: :created, location: @project }
       else
         format.html { render :new }
